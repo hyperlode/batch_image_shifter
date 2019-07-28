@@ -64,8 +64,11 @@ if __name__ == '__main__':
     app.SetOutputWindowAttributes(title='stdout')  
     wx.InitAllImageHandlers()
 
-    SOURCE_DIR = r"C:\Data\Dropbox\Camera Uploads"
-    RESULTS = "test.txt"
+    # SOURCE_DIR = r"C:\Temp\KVR\andi on bike selection 1\cycling\cycle towards"
+    # SOURCE_DIR = r"C:\Temp\KVR\andi on bike selection 1\cycling\cycle away\1"
+    # SOURCE_DIR = r"C:\Temp\KVR\andi on bike selection 1\cycling\cycle away\2"
+    SOURCE_DIR = r"C:\Temp\KVR\andi on bike selection 1\cycling\cycle away\3"
+    RESULTS = "coords.txt"
     logfile = "{}/{}".format(SOURCE_DIR, RESULTS)
 
     
@@ -79,7 +82,7 @@ if __name__ == '__main__':
             images.append("{}/{}".format(SOURCE_DIR, file))
     print(images)
     
-    for filepath in images[:2]:
+    for filepath in images:
         print(filepath)
         myframe = MyFrame(filepath=filepath)
         myframe.Center()
